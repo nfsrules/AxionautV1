@@ -49,23 +49,23 @@ class Axionaut():
 
   def start(self):
     self.state = 'running'
-	# Starting camera thread
+
     camera_thread = Thread(target=autopilot_loop, 
                     args=(self))
     camera_thread.start()
 
 
   def train(self):
-    # starting camera thread
+    self.state = 'running'
     camera_thread = Thread(target=training_loop, 
                 args=(self))
     camera_thread.start()
     
 
   def close(self):
-    """ Method to close the Axionaut ans stop the camera thread"""
-    # Kill the thread 888!crtl
+    """ Method to close the Axionaut"""
     self.state = 'stopped'
+    self.camera.close()
     camera_thread.join()
     print('Axionaut stopped')
 

@@ -32,7 +32,7 @@ if (args.mode == 'self_driving'):
     print('Vehicle started in self driving mode.')
 
     # Load self-driving pre-train model
-    model, graph = load_autopilot('autopilot_500k.hdf5')
+    model, graph = load_autopilot('autopilot.hdf5')
 
     print('Model loaded...')
 
@@ -69,38 +69,39 @@ elif(args.mode == 'training'):
     if (args.tl == True):
 
         # Load self-driving pre-trained model
-        model, graph = load_model('autopilot_500k.hdf5')
+        model, graph = load_model('autopilot.hdf5')
 
-        # Freeze all no convolutional layers
-        #for layer in model.layers:
-        #  layer.trainable = False
+        # Freeze all convolutional layers
+        for layer in model.layers:
+          layer.trainable = False
 
         # Training routine
         print('Training routine started with transfer learning. Press Crtl + C to exit.')
 
-        history, model = axionaut.train(model, graph, transfer_learning=True, 
-                        epochs=args.epochs, 
-                        batch_size=args.batch_size,
-                        optimizer=args.optimizer)
+        history = axionaut.train(model, graph, transfer_learning=True, 
+                                 epochs=args.epochs, 
+                                 batch_size=args.batch_size,
+                                 optimizer=args.optimizer)
 
-        outils.plot_losses(history)
+        outils.plot_train_loss(history)
 
-        print('trained finished. Model saved')
+        print('trained finished. Best model saved')
 
     else:
         if args.arch == 'ConvNets':
+
             # Create a new ConvNet model from library
             model =  architectures.ConvNets()
 
             # Train model
-            history, model = model.train(model, graph, transfer_learning=True, 
-                          epochs=args.epochs, 
-                          batch_size=args.batch_size,
-                          optimizer=args.optimizer)
+            history = model.train(model, graph, transfer_learning=True, 
+                                  epochs=args.epochs, 
+                                  batch_size=args.batch_size,
+                                  optimizer=args.optimizer)
 
-            outils.plot_losses(history)
+            outils.plot_train_loss(history)
 
-            print('trained finished. Model saved')
+            print('trained finished. Best model saved')
 
         else:
 
@@ -108,10 +109,10 @@ elif(args.mode == 'training'):
             model =  architectures.ConvNets()
 
             # Train model
-            history, model = model.train(model, graph, transfer_learning=True, 
-                          epochs=args.epochs, 
-                          batch_size=args.batch_size,
-                          optimizer=args.optimizer)
+            history = model.train(model, graph, transfer_learning=True, 
+                                  epochs=args.epochs, 
+                                  batch_size=args.batch_size,
+                                  optimizer=args.optimizer)
 
             print('Architecture ConvLSTM')
 

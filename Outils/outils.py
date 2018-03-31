@@ -30,11 +30,11 @@ def plot_train_loss(history):
   plt.legend(['train', 'test'], loc='upper left')
   plt.show()
 
+
 def predict_from_img(img):
   """
-  Given the 250x150 image from the Pi Camera
-  Returns the direction predicted by the model
-  array[5] : prediction
+  Given the 250x150 image from Camera
+  Returns prediction.
   """
   global graph, model
 
