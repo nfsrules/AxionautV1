@@ -1,8 +1,11 @@
-## Project title
+## Axionaut
+Mini autonomous rc vehicle prototyping for 
 A little info about your project and/ or overview that explains **what** the project is about.
 
 ## Motivation
-A short description of the motivation behind the creation and maintenance of the project. This should explain **why** the project exists.
+Axionaut provides a straightforward approach to test and prototype mini RC autonomous vehicles. Allows easy implementation, database recording and 
+experimenting. Axionaut is intended to experimentation, use the build-in Deep Learning architures and models to start!.
+
 
 ## Build status
 Build status of continus integration i.e. travis, appveyor etc. Ex. - 
@@ -11,11 +14,11 @@ Build status of continus integration i.e. travis, appveyor etc. Ex. -
 [![Windows Build Status](https://ci.appveyor.com/api/projects/status/github/akashnimare/foco?branch=master&svg=true)](https://ci.appveyor.com/project/akashnimare/foco/branch/master)
 
 ## Code style
-If you're using any code style like xo, standard etc. That will help others while contributing to your project. Ex. -
-
-[![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](https://github.com/feross/standard)
+PPEP 8 -- Style Guide for Python Code. Please use spaces as indentation :)
+[![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](https://www.python.org/dev/peps/pep-0008/)
  
-## Screenshots
+
+## Screenshot
 Include logo/demo screenshot etc.
 
 ## Tech/framework used
