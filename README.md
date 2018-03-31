@@ -1,38 +1,94 @@
 ## Axionaut
-Mini autonomous RC vehicle prototyping for AI enthusiasts.
+Mini autonomous RC vehicle for AI enthusiasts.
 
-## Motivation
-<p style=text-align: justify> Axionaut provides a straightforward approach to prototype mini RC autonomous vehicles. Allows easy implementation and includes convenient functionalities as: data recording, model training and autopilot. Axionaut is intended to experimentation, use the build-in Deep Learning architures and models to start!. </p>
+## Introduction
+Axionaut provides a straightforward approach to prototype mini RC autonomous vehicles. 
 
+The complete bill of materials can be found here:
+https://www.axionable.com/axionaut-termine-1er-de-la-deuxieme-course-iron-car/
+
+Axionaut is intended to rapid experimentation, use the built-in Deep Learning architectures and start driving!.
+
+Totally free and open for everyone to use and contribute.
 
 ## Code style
-PPEP 8 -- Style Guide for Python Code.
+PEP 8 -- Style Guide for Python Code.
  
 
 ## Screenshot
 ![alt text](https://www.axionable.com/wp-content/uploads/2018/02/axionautV1.png)
 
 
-
-
 ## Tech/framework used
-Ex. -
 
-<b>Built with</b>
-- [Electron](https://electron.atom.io)
+<b>Built using:</b>
+- [TensorFlow](https://www.tensorflow.org)
+- [Keras](https://keras.io)
+
 
 ## Features
 
-The BOM can be found here:
-https://www.axionable.com/axionaut-termine-1er-de-la-deuxieme-course-iron-car/
+1. Autonomous drive mode: Real-time autopilot using Deep Learning models.
+2. Data recording: Live data recording from the car.
+3. Training mode: Build and train your own driving models from scratch or using Transfer Learning.
+4. Free ride: Enjoy driving your RC car on the free ride mode.
 
-What makes your project stand out?
 
 ## Code Example
-Show what the library does as concisely as possible, developers should be able to figure out **how** your project solves their problem by looking at the code example. Make sure the API you are showing off is obvious, and that your code is short and concise.
+
+Create a new vehicle and set it to self-driving mode is extreamely easy:
+
+	#Load self-driving pre-train model
+    model, graph = load_autopilot('autopilot.hdf5')
+
+    # Create Axionaut car with default settings
+    axionaut = vehicles.Axionaut()
+
+    # Configure PDW control commands as default
+    axionaut.commands = get_commands(path=None, default=True)
+
+    # Test camera position
+    axionaut.camera_test()
+
+    # Set vehicle to auto pilot mode 
+    axionaut.autopilot(model, graph)
+
+    # Start car   
+    axionaut.start()
+
+
+Also, the following commands are avaliable:
+
+To start self-driving mode:
+`python main.py mode self_driving`
+
+To start recording mode:
+`python main.py mode record`
+
+To start on free ride mode:
+`python main.py mode free`
+
+To train your own model:
+`python main.py mode train architecture ConvNets epochs 100 batch size 300 optimizer Adam`
+
+Feel free to set your prefered training hyperparameters!
+
 
 ## Installation
-Provide step by step series of examples and explanations about how to get a development env running.
+### On the Raspberry:
+Clone repository to your Raspberry Pi:
+`git clone https://github.com/Axionable/AxionautV1`
+
+Install packages:
+`pip install -r requirements.txt`
+
+### On the computer side:
+Clone repository to your laptop:
+`git clone https://github.com/Axionable/AxionautV1`
+
+Install packages:
+`pip install -r laptop_requirements.txt`
+
 
 ## API Reference
 
