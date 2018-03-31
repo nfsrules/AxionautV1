@@ -6,12 +6,14 @@ Mini autonomous RC vehicle prototyping for AI enthusiasts.
 
 
 ## Code style
-PPEP 8 -- Style Guide for Python Code. Please use spaces as indentation :) -
-[![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](https://www.python.org/dev/peps/pep-0008/)
+PPEP 8 -- Style Guide for Python Code.
  
 
 ## Screenshot
-Include logo/demo screenshot etc.
+![alt text](https://www.axionable.com/wp-content/uploads/2018/02/axionautV1.png"Logo Title Text 1")
+
+
+
 
 ## Tech/framework used
 Ex. -
