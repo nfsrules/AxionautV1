@@ -1,8 +1,8 @@
 # coding=utf-8
 import sys
 import os
-#import matplotlib.pyplot as plt
-#plt.style.use('ggplot')
+import matplotlib.pyplot as plt
+plt.style.use('ggplot')
 import tensorflow as tf
 from keras.models import load_model
 import json
@@ -12,15 +12,7 @@ import picamera.array
 
 models_path = 'models/'
 
-# config to save images
-#ct = datetime.datetime.now().strftime('%Y_%m_%d_%H_%M_%S')
-#save_folder = os.path.join('datasets/', str(ct))
-
-#if not os.path.exists(save_folder):
-#  os.makedirs(save_folder)
-
-"""
-def plot_losses(history):
+def plot_train_loss(history):
   
   plt.plot(history.history['acc'])
   plt.plot(history.history['val_acc'])
@@ -37,7 +29,7 @@ def plot_losses(history):
   plt.xlabel('epoch')
   plt.legend(['train', 'test'], loc='upper left')
   plt.show()
-"""
+
 def predict_from_img(img):
   """
   Given the 250x150 image from the Pi Camera
