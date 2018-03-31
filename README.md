@@ -7,7 +7,7 @@ Axionaut provides a straightforward approach to prototype mini RC autonomous veh
 The complete bill of materials is avaliable here:
 https://www.axionable.com/axionaut-termine-1er-de-la-deuxieme-course-iron-car/
 
-Axionaut is intended to rapid experimentation, use the built-in Deep Learning architectures and start driving!
+Axionaut is intended for rapid experimentation, use the built-in Deep Learning architectures and start driving!
 
 Axionaut is totally free and open for everyone to use and contribute.
 
