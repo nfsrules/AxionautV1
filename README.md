@@ -59,16 +59,16 @@ Create a new vehicle and set it to self-driving mode is extreamely easy:
 
 The following commands are avaliable when using the main.py example:
 
-<strong>To start self-driving mode:</strong>
+<strong>Start vehicle on self-driving mode:</strong>
 `python main.py mode self_driving`
 
-<strong>To start recording mode:</strong>
+<strong>Start on recording mode:</strong>
 `python main.py mode record`
 
-<strong>To start on free ride mode:</strong>
+<strong>Start on free ride mode:</strong>
 `python main.py mode free`
 
-<strong>To train your own model:</strong>
+<strong>To train your own driving model:</strong>
 `python main.py mode train architecture ConvNets epochs 100 batch size 300 optimizer Adam`
 
 Feel free to explore and set your prefered training hyperparameters!
@@ -96,7 +96,7 @@ Axionaut is currently under active developement.
 
 ## Contribute
 
-Axionaut is totally free and open for everyone to use and contribute.
+Axionaut is totally free and open for everyone to use, please feel free to contribute!
 
 
 ## Credits
