@@ -34,7 +34,7 @@ PEP 8 -- Style Guide for Python Code.
 4. <strong>Free ride:</strong> Enjoy driving your RC car on the free ride mode.
 
 
-## Code Example
+## API
 
 Create a new vehicle and set it to self-driving mode is extreamely easy:
 
@@ -56,8 +56,9 @@ Create a new vehicle and set it to self-driving mode is extreamely easy:
     # Start car   
     axionaut.start()
 
+## Code Exemple
 
-Also, the following commands are avaliable:
+The following commands are avaliable when using the main.py example:
 
 <strong>To start self-driving mode:</strong>
 `python main.py mode self_driving`
@@ -92,10 +93,14 @@ Feel free to explore and set your prefered training hyperparameters!
 
 ## Status
 
+Axionaut is currently under active developement.
 
 ## Contribute
 
-Axionaut is currently under developement. Please feel free to contribute!
+Please feel free to test, use and contribute!
 
 ## Credits
-IronCar France 2018
+
+- [IronCar France](https://github.com/vinzeebreak/ironcar)
+
+
