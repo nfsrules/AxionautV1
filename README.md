@@ -1,10 +1,8 @@
 ## Axionaut
-Mini autonomous rc vehicle prototyping for 
-A little info about your project and/ or overview that explains **what** the project is about.
+Mini autonomous RC vehicle prototyping for AI enthusiasts.
 
 ## Motivation
-Axionaut provides a straightforward approach to test and prototype mini RC autonomous vehicles. Allows easy implementation, database recording and 
-experimenting. Axionaut is intended to experimentation, use the build-in Deep Learning architures and models to start!.
+<p>Axionaut provides a straightforward approach to prototype mini RC autonomous vehicles. Allows easy implementation and includes convenient functionalities as: data recording, model training and autopilot. Axionaut is intended to experimentation, use the build-in Deep Learning architures and models to start!.</p>
 
 
 ## Build status
@@ -14,7 +12,7 @@ Build status of continus integration i.e. travis, appveyor etc. Ex. -
 [![Windows Build Status](https://ci.appveyor.com/api/projects/status/github/akashnimare/foco?branch=master&svg=true)](https://ci.appveyor.com/project/akashnimare/foco/branch/master)
 
 ## Code style
-PPEP 8 -- Style Guide for Python Code. Please use spaces as indentation :)
+PPEP 8 -- Style Guide for Python Code. Please use spaces as indentation :) -
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](https://www.python.org/dev/peps/pep-0008/)
  
 
