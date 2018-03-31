@@ -9,7 +9,6 @@ https://www.axionable.com/axionaut-termine-1er-de-la-deuxieme-course-iron-car/
 
 Axionaut is intended for rapid experimentation, use the built-in Deep Learning architectures and start driving!
 
-Axionaut is totally free and open for everyone to use and contribute.
 
 ## Code style
 PEP 8 -- Style Guide for Python Code.
@@ -97,7 +96,8 @@ Axionaut is currently under active developement.
 
 ## Contribute
 
-Please feel free to test, use and contribute!
+Axionaut is totally free and open for everyone to use and contribute.
+
 
 ## Credits
 
