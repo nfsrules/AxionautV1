@@ -1,13 +1,13 @@
 # coding=utf-8
 import os
 import sys
-sys.path.append('Functions/')
-sys.path.append('Ops/')
-sys.path.append('Outils/')
+sys.path.append('Modules/')
 sys.path.append('Databases/')
 sys.path.append('Architectures/')
+sys.path.append('Models/')
 
-from outils import load_autopilot, get_commands
+
+from utils import load_autopilot, get_commands
 import architectures
 import vehicles 
 import argparse
@@ -83,7 +83,7 @@ elif(args.mode == 'training'):
                                  batch_size=args.batch_size,
                                  optimizer=args.optimizer)
 
-        outils.plot_train_loss(history)
+        utils.plot_train_loss(history)
 
         print('trained finished. Best model saved')
 

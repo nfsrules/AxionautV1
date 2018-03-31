@@ -35,7 +35,7 @@ PEP 8 -- Style Guide for Python Code.
 
 ## API
 
-Create a new vehicle and set it to self-driving mode is extreamely easy:
+Create a new vehicle and set it to self-driving mode is extremely easy:
 
 	#Load self-driving pre trained model
     model, graph = load_autopilot('autopilot.hdf5')
