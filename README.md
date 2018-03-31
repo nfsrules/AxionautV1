@@ -76,17 +76,17 @@ Feel free to explore and set your prefered training hyperparameters!
 
 ## Installation
 ### Raspberry side:
-Clone repository to your Raspberry Pi:
+<strong>Clone repository to your Raspberry Pi:</strong>
 `git clone https://github.com/Axionable/AxionautV1`
 
-Install packages:
+<strong>Install packages:</strong>
 `pip install -r requirements.txt`
 
 ### Computer side:
-Clone repository to your laptop:
+<strong>Clone repository to your laptop:</strong>
 `git clone https://github.com/Axionable/AxionautV1`
 
-Install packages:
+<strong>Install packages:</strong>
 `pip install -r laptop_requirements.txt`
 
 
