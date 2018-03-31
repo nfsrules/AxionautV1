@@ -38,7 +38,7 @@ PEP 8 -- Style Guide for Python Code.
 
 Create a new vehicle and set it to self-driving mode is extreamely easy:
 
-	#Load self-driving pre-train model
+	#Load self-driving pre trained model
     model, graph = load_autopilot('autopilot.hdf5')
 
     # Create Axionaut car with default settings
