@@ -5,6 +5,9 @@ from keras.optimizers import SGD, Adam
 from keras.layers import Conv2D, MaxPooling2D
 from keras import callbacks
 
+
+model_path = 'Models/'
+
 class ConvNets(Sequential):
     def __init__(self,input_shape = (70, 250, 3), learning_rate=0.5, optimizers='sgd'):
         super(ConvNets, self).__init__()
@@ -79,20 +82,23 @@ class ConvNets(Sequential):
         self.summary()
 
     def train(self, train_X, train_Y, batch_size=300,nb_epoch=100,validation_split=0.1):
-        """Training method with built-in early stopping. Return plot history."""
-        #Save the model after each epoch if the validation loss improved. HOLIII
-    #    save_best = callbacks.ModelCheckpoint(model_path, monitor='val_loss', verbose=1, save_best_only=True, mode='min')
+        """Training method with built-in early stopping. Return plot history
+        Save the model after each epoch if the validation loss improved. """
+
+        save_best = callbacks.ModelCheckpoint(model_path, monitor='val_loss', 
+                                              verbose=1, save_best_only=True, mode='min')
 
         #stop training if the validation loss doesn't improve for 5 consecutive epochs.
         early_stop = callbacks.EarlyStopping(monitor='val_loss', min_delta=0,patience=5, verbose=0, mode='auto')
 
         callbacks_list = [save_best, early_stop]
 
-        history = model.fit([train_X], train_Y,
+        history = self.fit([train_X], train_Y,
                   batch_size=100,
                   nb_epoch=50,
                   validation_split=0.1,
                   callbacks=callbacks_list,
                   verbose=1)
+
         return history
 
