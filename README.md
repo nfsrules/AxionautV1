@@ -10,7 +10,7 @@ PPEP 8 -- Style Guide for Python Code.
  
 
 ## Screenshot
-![alt text](https://www.axionable.com/wp-content/uploads/2018/02/axionautV1.png"Logo Title Text 1")
+![alt text](https://www.axionable.com/wp-content/uploads/2018/02/axionautV1.png)
 
 
 
