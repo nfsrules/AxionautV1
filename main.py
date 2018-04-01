@@ -99,7 +99,7 @@ elif(args.mode == 'training'):
                                   batch_size=args.batch_size,
                                   optimizer=args.optimizer)
 
-            outils.plot_train_loss(history)
+            utils.plot_train_loss(history)
 
             print('trained finished. Best model saved')
 
