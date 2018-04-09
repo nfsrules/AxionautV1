@@ -89,6 +89,48 @@ def freeze(model):
     layer.trainable = False
   return model
 
+# Import GPIO Libraries
+import math
+import RPi.GPIO as GPIO
+import time
+
+# Configure pins and starting the hardware
+GPIO.setmode(GPIO.BMC)
+TRIG = 23
+ECHO = 24
+
+GPIO.setup(TRIG,GPIO.OUT)
+GPIO.setup(ECHO,GPIO.IN)
+
+GPIO.output(TRIG, False)
+print("Waiting For Sensor Start")
+time.sleep(2)
+
+
+def distance_measure():
+"""Estimate distance to any object in front of the vehicle.
+The result is given in centimeters.
+"""
+    GPIO.output(TRIG, True)
+    time.sleep(0.00001)
+    GPIO.output(TRIG, False)
+
+    while GPIO.input(ECHO)==0:
+      pulse_start = time.time()
+
+    while GPIO.input(ECHO)==1:
+      pulse_end = time.time()
+
+    pulse_duration = pulse_end - pulse_start
+
+    distance = pulse_duration * 17150
+
+    distance = round(distance, 2)
+
+return distance
+
+GPIO.cleanup()
+
 
 def speed_control(local_angle, max_speed, curve_factor):
   """Function to control speed in curves.
@@ -97,7 +139,21 @@ def speed_control(local_angle, max_speed, curve_factor):
   Return:
   Fixed max speed in curves.
   """
-  return max_speed * (1 - local_angle * np.exp(-curve_factor))
+    # Check distance to closest object (Based on HC-SR04)
+    if distance_measure() < 5:
+        local_gas = 0
+    else:
+        # Calcule k_factor
+        global k_factor
+        k_factor = (-1) * math.log(curve_factor)
+
+        # Correcting throttle 
+        if local_angle < 0:
+            max_speed = math.exp(k_factor * local_angle)
+        else:
+            max_speed = math.exp((-1) * k_factor * local_angle) 
+
+  return local_gas
 
 
 def autopilot(img):
